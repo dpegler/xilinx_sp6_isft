@@ -1,0 +1,466 @@
+##
+###########################################################################
+##  Copyright(C) 2010 by Xilinx, Inc. All rights reserved.               ##
+##                                                                       ##
+##  You may copy and modify these files for your own internal use solely ##
+##  with Xilinx programmable logic devices and  Xilinx EDK system or     ##
+##  create IP modules solely for Xilinx programmable logic devices and   ##
+##  Xilinx EDK system. No rights are granted to distribute any files     ##
+##  unless they are distributed in Xilinx programmable logic devices.    ##
+##                                                                       ##
+##  Source code is provided "as-is", with no obligation on the part of   ##
+##  Xilinx to provide support.                                           ##
+##                                                                       ##
+###########################################################################
+#
+#############################################################################
+# Target Board: Xilinx Spartan-6 SP605 Evaluation Platform Rev C           ##
+# Family:  spartan6                                                        ##
+# Device:  xc6slx45t                                                       ##
+# Package: fgg484                                                          ##
+# Speed Grade: -3                                                          ##
+#############################################################################
+#
+
+NET  sys_clk_in_p            LOC = K21  | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+NET  sys_clk_in_n            LOC = K22  | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+
+Net sys_rst_pin LOC= H8 | IOSTANDARD = LVCMOS15;
+## System level constraints
+Net sys_rst_pin TIG;
+
+Net dcm_clk_s TNM_NET = dcm_clk_s;
+TIMESPEC TS_dcm_clk_s = PERIOD dcm_clk_s 5000 ps;
+
+## IO Devices constraints
+
+#### Module RS232_Uart_1 constraints
+
+Net fpga_0_RS232_Uart_1_sin_pin LOC=H17  | IOSTANDARD = LVCMOS25;
+Net fpga_0_RS232_Uart_1_sout_pin LOC=B21 | IOSTANDARD = LVCMOS25;
+
+
+#### Module LEDs_8Bit constraints
+
+Net fpga_0_LEDs_4Bit_GPIO_d_out_pin<0> LOC = D17  | IOSTANDARD = LVCMOS25;
+Net fpga_0_LEDs_4Bit_GPIO_d_out_pin<1> LOC = AB4  | IOSTANDARD = LVCMOS25;
+Net fpga_0_LEDs_4Bit_GPIO_d_out_pin<2> LOC = D21  | IOSTANDARD = LVCMOS25;
+Net fpga_0_LEDs_4Bit_GPIO_d_out_pin<3> LOC = W15  | IOSTANDARD = LVCMOS25;
+
+#### Module Push_Buttons_4Bit constraints
+
+Net fpga_0_Push_Buttons_4Bit_GPIO_IO_pin<0> LOC = F3 | IOSTANDARD = LVCMOS15;
+Net fpga_0_Push_Buttons_4Bit_GPIO_IO_pin<1> LOC = G6 | IOSTANDARD = LVCMOS15;
+Net fpga_0_Push_Buttons_4Bit_GPIO_IO_pin<2> LOC = F5 | IOSTANDARD = LVCMOS15;
+Net fpga_0_Push_Buttons_4Bit_GPIO_IO_pin<3> LOC = C1 | IOSTANDARD = LVCMOS15;
+
+
+#### Module DIP_Switches_4Bit constraints
+
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<0> LOC=C18 | IOSTANDARD = LVCMOS25;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<1> LOC=Y6 | IOSTANDARD = LVCMOS25;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<2> LOC=W6 | IOSTANDARD = LVCMOS25;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<3> LOC=E4 | IOSTANDARD = LVCMOS25;
+
+#### Module IIC_EEPROM constraints
+
+Net fpga_0_IIC_EEPROM_Scl_pin LOC=T21;
+Net fpga_0_IIC_EEPROM_Scl_pin SLEW = SLOW;
+Net fpga_0_IIC_EEPROM_Scl_pin DRIVE = 6;
+Net fpga_0_IIC_EEPROM_Scl_pin IOSTANDARD=LVCMOS25;
+Net fpga_0_IIC_EEPROM_Sda_pin LOC=R22;
+Net fpga_0_IIC_EEPROM_Sda_pin SLEW = SLOW;
+Net fpga_0_IIC_EEPROM_Sda_pin DRIVE = 6;
+Net fpga_0_IIC_EEPROM_Sda_pin IOSTANDARD=LVCMOS25;
+
+#### Module SPI_FLASH constraints
+
+Net fpga_0_SPI_FLASH_MOSI_pin LOC=AB20 | IOSTANDARD=LVCMOS25;
+Net fpga_0_SPI_FLASH_SCK_pin LOC=Y20 | IOSTANDARD=LVCMOS25;
+Net fpga_0_SPI_FLASH_SS_pin<0> LOC=AA3 | IOSTANDARD=LVCMOS25;
+
+#### Module FLASH constraints
+
+NET fpga_0_FLASH_Mem_A_pin<7> LOC = G19;
+NET fpga_0_FLASH_Mem_A_pin<8> LOC = F20;
+NET fpga_0_FLASH_Mem_A_pin<9> LOC = H18;
+NET fpga_0_FLASH_Mem_A_pin<10> LOC = H19;
+NET fpga_0_FLASH_Mem_A_pin<11> LOC = F21;
+NET fpga_0_FLASH_Mem_A_pin<12> LOC = F22;
+NET fpga_0_FLASH_Mem_A_pin<13> LOC = E20;
+NET fpga_0_FLASH_Mem_A_pin<14> LOC = E22;
+NET fpga_0_FLASH_Mem_A_pin<15> LOC = J19;
+NET fpga_0_FLASH_Mem_A_pin<16> LOC = H20;
+NET fpga_0_FLASH_Mem_A_pin<17> LOC = K19;
+NET fpga_0_FLASH_Mem_A_pin<18> LOC = K18;
+NET fpga_0_FLASH_Mem_A_pin<19> LOC = G20;
+NET fpga_0_FLASH_Mem_A_pin<20> LOC = G22;
+NET fpga_0_FLASH_Mem_A_pin<21> LOC = K17;
+NET fpga_0_FLASH_Mem_A_pin<22> LOC = L17;
+NET fpga_0_FLASH_Mem_A_pin<23> LOC = H21;
+NET fpga_0_FLASH_Mem_A_pin<24> LOC = H22;
+NET fpga_0_FLASH_Mem_A_pin<25> LOC = K20;
+NET fpga_0_FLASH_Mem_A_pin<26> LOC = L19;
+NET fpga_0_FLASH_Mem_A_pin<27> LOC = M21;
+NET fpga_0_FLASH_Mem_A_pin<28> LOC = M22;
+NET fpga_0_FLASH_Mem_A_pin<29> LOC = N20;
+NET fpga_0_FLASH_Mem_A_pin<30> LOC = N22;
+NET fpga_0_FLASH_Mem_A_pin<*> IOSTANDARD=LVCMOS25;
+
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<0> LOC = AB12;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<1> LOC = AA12;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<2> LOC = Y13;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<3> LOC = AB18;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<4> LOC = AA18;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<5> LOC = AB19;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<6> LOC = U6;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<7> LOC = T7;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<8> LOC = W9;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<9> LOC = AB5;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<10> LOC = Y5;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<11> LOC = AB6;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<12> LOC = AA6;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<13> LOC = T14;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<14> LOC = R13;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<15> LOC = AA20;
+NET fpga_0_FLASH_Mem_DQ_Shared_pin<*> IOSTANDARD=LVCMOS25;
+
+ 
+Net fpga_0_FLASH_Mem_WEN_pin LOC=R20 |  IOSTANDARD=LVCMOS25;
+Net fpga_0_FLASH_Mem_OEN_pin LOC=P22 |  IOSTANDARD=LVCMOS25;
+
+Net fpga_0_FLASH_Mem_CEN_pin LOC=P21 | IOSTANDARD=LVCMOS25;
+Net fpga_0_FLASH_Mem_ADV_LDN_pin LOC=T19 | IOSTANDARD=LVCMOS25;
+Net fpga_0_FLASH_Mem_RPN_pin LOC=V13 | IOSTANDARD=LVCMOS25;
+
+#### Module SysACE_CompactFlash constraints
+
+Net fpga_0_SysACE_CompactFlash_SysACE_CLK_pin LOC=N19;
+Net fpga_0_SysACE_CompactFlash_SysACE_CLK_pin IOSTANDARD = LVCMOS25;
+Net fpga_0_SysACE_CompactFlash_SysACE_CLK_pin PERIOD = 30000 ps;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<0> LOC=V5;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<1> LOC=V3;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<2> LOC=P5;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<3> LOC=P4;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<4> LOC=H4;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<5> LOC=G4;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<6> LOC=D2;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPA_pin<*> IOSTANDARD = LVCMOS15;
+
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<0> LOC=N6;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<1> LOC=N7;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<2> LOC=U4;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<3> LOC=T4;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<4> LOC=P6;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<5> LOC=P7;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<6> LOC=T3;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<7> LOC=R4;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPD_pin<*> IOSTANDARD = LVCMOS15;
+
+Net fpga_0_SysACE_CompactFlash_SysACE_CEN_pin LOC=W4;
+Net fpga_0_SysACE_CompactFlash_SysACE_CEN_pin IOSTANDARD = LVCMOS15;
+Net fpga_0_SysACE_CompactFlash_SysACE_OEN_pin LOC=T6;
+Net fpga_0_SysACE_CompactFlash_SysACE_OEN_pin IOSTANDARD = LVCMOS15;
+Net fpga_0_SysACE_CompactFlash_SysACE_WEN_pin LOC=T5;
+Net fpga_0_SysACE_CompactFlash_SysACE_WEN_pin IOSTANDARD = LVCMOS15;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin LOC=AA2;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin IOSTANDARD = LVCMOS15;
+Net fpga_0_SysACE_CompactFlash_SysACE_MPIRQ_pin TIG;
+
+### MCB parameters
+NET MPMC_0_mcbx_dram_zio LOC = M7 | IOSTANDARD = SSTL15_II;
+
+#### DVI Constraints
+
+Net xps_tft_0_TFT_DVI_DATA_pin<11>  LOC=R17;
+Net xps_tft_0_TFT_DVI_DATA_pin<10>  LOC=P18;
+Net xps_tft_0_TFT_DVI_DATA_pin<9>  LOC=P17;
+Net xps_tft_0_TFT_DVI_DATA_pin<8>  LOC=R16;
+Net xps_tft_0_TFT_DVI_DATA_pin<7>  LOC=R15;
+Net xps_tft_0_TFT_DVI_DATA_pin<6>  LOC=M18;
+Net xps_tft_0_TFT_DVI_DATA_pin<5>  LOC=M17;
+Net xps_tft_0_TFT_DVI_DATA_pin<4>  LOC=P16;
+Net xps_tft_0_TFT_DVI_DATA_pin<3>  LOC=N16;
+Net xps_tft_0_TFT_DVI_DATA_pin<2>  LOC=T20;
+Net xps_tft_0_TFT_DVI_DATA_pin<1> LOC=U19;
+Net xps_tft_0_TFT_DVI_DATA_pin<0> LOC=K16;
+
+Net xps_tft_0_TFT_DVI_DATA_pin<*> IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 24;
+
+Net xps_tft_0_TFT_DVI_CLK_P_pin LOC=C20;
+Net xps_tft_0_TFT_DVI_CLK_P_pin IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 24;
+Net xps_tft_0_TFT_DVI_CLK_N_pin LOC=C22;
+Net xps_tft_0_TFT_DVI_CLK_N_pin IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 24;
+
+Net xps_tft_0_TFT_HSYNC_pin LOC=J16;
+Net xps_tft_0_TFT_HSYNC_pin IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 24;
+
+Net xps_tft_0_TFT_VSYNC_pin LOC=B22;
+Net xps_tft_0_TFT_VSYNC_pin IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 24;
+
+Net xps_tft_0_TFT_DE_pin LOC=J17;
+Net xps_tft_0_TFT_DE_pin IOSTANDARD = LVCMOS25 | SLEW = FAST | DRIVE = 24;
+
+Net xps_tft_0_TFT_IIC_SCL LOC=W13;
+Net xps_tft_0_TFT_IIC_SCL SLEW = SLOW;
+Net xps_tft_0_TFT_IIC_SCL DRIVE = 12;
+Net xps_tft_0_TFT_IIC_SCL TIG;
+Net xps_tft_0_TFT_IIC_SCL IOSTANDARD=LVCMOS25;
+Net xps_tft_0_TFT_IIC_SCL PULLUP;
+
+Net xps_tft_0_TFT_IIC_SDA LOC=AA4;
+Net xps_tft_0_TFT_IIC_SDA SLEW = SLOW;
+Net xps_tft_0_TFT_IIC_SDA DRIVE = 12;
+Net xps_tft_0_TFT_IIC_SDA TIG;
+Net xps_tft_0_TFT_IIC_SDA IOSTANDARD=LVCMOS25;
+Net xps_tft_0_TFT_IIC_SDA PULLUP;
+
+NET vga_reset_pin LOC = L15;
+NET vga_reset_pin TIG;
+NET vga_reset_pin SLEW = SLOW;
+NET vga_reset_pin DRIVE = 2;
+NET vga_reset_pin IOSTANDARD = LVCMOS25;
+
+#### Soft_TEMAC constraints
+#### Module Soft_TEMAC constraints
+
+Net fpga_0_Soft_TEMAC_TemacPhy_RST_n_pin LOC=J22 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_TemacPhy_RST_n_pin TIG;
+
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<7> LOC ="U22" | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<6> LOC ="V21";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<5> LOC ="V22";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<4> LOC ="W20";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<3> LOC ="W22";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<2> LOC ="Y21";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<1> LOC ="Y22";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<0> LOC ="P19";
+Net fpga_0_Soft_TEMAC_GMII_RXD_0_pin<*> IOSTANDARD = LVCMOS25;
+
+
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<7> LOC ="W12";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<6> LOC ="Y12";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<5> LOC ="Y9";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<4> LOC ="AB9";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<3> LOC ="AA8";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<2> LOC ="AB8";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<1> LOC ="T10";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<0> LOC ="U10";
+Net fpga_0_Soft_TEMAC_GMII_TXD_0_pin<*> IOSTANDARD = LVCMOS25;
+
+
+Net fpga_0_Soft_TEMAC_GMII_TX_EN_0_pin LOC=T8 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_GMII_TX_ER_0_pin LOC=U8 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_GMII_TX_CLK_0_pin LOC=AB7 | IOSTANDARD = LVCMOS25;
+
+Net fpga_0_Soft_TEMAC_GMII_RX_DV_0_pin LOC=T22 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_GMII_RX_ER_0_pin LOC=U20 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_GMII_RX_CLK_0_pin LOC=P20 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_MII_TX_CLK_0_pin LOC = L20 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_MDC_0_pin LOC=R19 | IOSTANDARD = LVCMOS25;
+Net fpga_0_Soft_TEMAC_MDIO_0_pin LOC=V20 | IOSTANDARD = LVCMOS25;
+
+###### Soft_TEMAC
+# This is a GMII system
+# LlinkTemac0_CLK = plb_v46 clk = host clock = 100MHz from clock generator
+# Rx/Tx Client clocks are Rx/Tx PHY clocks so CORE Gen PHY clock constraints propagate to Rx/Tx client clock periods
+# Time domain crossing constraints (DATAPATHONLY) are set for maximum bus frequency
+# allowed by IP which is the maximum option in BSB. For lower bus frequency choice in BSB,
+# the constraints are over constrained. Relaxing them for your system may reduce build time.
+
+NET "*Soft_TEMAC*/LlinkTemac0_CLK"   TNM_NET = "LLCLK0"; #name of signal connected to TEMAC LlinkTemac0_CLK input
+NET "*Soft_TEMAC*/SPLB_Clk"          TNM_NET = "PLBCLK"; #name of signal connected to TEMAC SPLB_Clk input                                 
+
+TIMESPEC "TS_LL_CLK0_2_RX_CLIENT_CLK0"  = FROM LLCLK0 TO clk_rx     8000 ps DATAPATHONLY; #constant value based on Ethernet clock
+TIMESPEC "TS_LL_CLK0_2_TX_CLIENT_CLK0"  = FROM LLCLK0 TO clk_tx_gmii 8000 ps DATAPATHONLY; #constant value based on Ethernet clock
+TIMESPEC "TS_RX_CLIENT_CLK0_2_LL_CLK0"  = FROM clk_rx      TO LLCLK0 10000 ps DATAPATHONLY; #varies based on period of LocalLink clock
+TIMESPEC "TS_TX_CLIENT_CLK0_2_LL_CLK0"  = FROM clk_tx_gmii TO LLCLK0 10000 ps DATAPATHONLY; #varies based on period of LocalLink clock
+
+# Rx Clock crossings - Some paths are analyzed by the TS_flow_rx_to_tx constraint also 
+# Needed since ts_resync_flops is commented out
+TIMESPEC "TS_RX_CLIENT_CLK0_2_GTX_CLK"  = FROM clk_rx     TO clk_gtx    8000 ps DATAPATHONLY; #constant value based on constant 125 MHZ GTX clock 
+
+# This is the same as TS_TX_CLIENT_CLK0_2_LL_CLK0 when PLBCLK = LLCLK0
+TIMESPEC "TS_GTX_CLK_2_PLB_CLIENT_CLK"  = FROM clk_gtx TO PLBCLK 10000 ps DATAPATHONLY; #varies based on period of PLB clock               
+# This is the same as TS_LL_CLK0_2_TX_CLIENT_CLK0 when PLBCLK = LLCLK0
+TIMESPEC "TS_PLB_CLIENT_CLK_2_GTX_CLK"  = FROM PLBCLK TO clk_gtx 8000 ps DATAPATHONLY; #constant value based on constant 125 MHZ GTX clock 
+
+###############################################################################
+# CLOCK CONSTRAINTS
+# The following constraints are required. If you choose to not use the example
+# design level of wrapper hierarchy, the net names should be translated to
+# match your design.
+###############################################################################
+
+############################################################
+# RX Clock period Constraints                              #
+############################################################
+# Receiver clock period constraints: please do not relax
+# Changed NET name
+#NET "gmii_rx_clk"     TNM_NET = "clk_rx";
+NET "*/GMII_RX_CLK_0" TNM_NET = "clk_rx";
+TIMEGRP "rx_clock" = "clk_rx";
+TIMESPEC "TS_rx_clk" = PERIOD "rx_clock" 8000 ps HIGH 50 %;
+
+############################################################
+# TX Clock period Constraints                              #
+############################################################
+# Transmitter clock period constraints: please do not relax
+# Changed NET name
+#NET "gtx_clk*"             TNM_NET  = "clk_gtx";
+NET "*/GTX_CLK_0"          TNM_NET  = "clk_gtx";
+TIMEGRP "gtx_clock"        = "clk_gtx";
+TIMESPEC "TS_gtx_clk"      = PERIOD "gtx_clock" 8000 ps HIGH 50 %;
+
+# Changed NET name
+# NET "*tx_gmii_clk"   TNM_NET = "clk_tx_gmii";
+NET "*tx_gmii_mii_clk_int_0" TNM_NET = "clk_tx_gmii";
+TIMEGRP "tx_clock_gmii" = "clk_tx_gmii";
+TIMESPEC "TS_tx_clk_gmii" = PERIOD "tx_clock_gmii" 8000 ps HIGH 50 %;
+                                                                        
+
+############################################################
+# Host Clock period Constraint                             #
+############################################################
+# Management Clock period constraints: relax as required
+# Example frequency of 90 MHz
+# Changed NET name
+# NET "host_clk" TNM_NET = "host_clk";
+NET "*/SPLB_Clk" TNM_NET = "host_clk";
+TIMEGRP "host" = "host_clk" EXCEPT "mdio_logic";
+TIMESPEC "TS_host_clk" = PERIOD "host" 10000 ps HIGH 50 %;
+
+############################################################
+# External GMII Constraints                                #
+############################################################
+# GMII Transmitter Constraints:  place flip-flops in IOB
+# Changed 'true' to 'force'
+INST "*gmii_txd*"                  IOB = force;
+INST "*gmii_tx_en"                 IOB = force;
+INST "*gmii_tx_er"                 IOB = force;
+
+# GMII Receiver Constraints:  place flip-flops in IOB
+# Changed 'true' to 'force'
+INST "*rxd_to_mac*"                IOB = force;
+INST "*rx_dv_to_mac"               IOB = force;
+INST "*rx_er_to_mac"               IOB = force;
+
+
+############################################################
+# The following are required to maximize setup/hold        #
+############################################################
+# Changed to add Drive strength and INST Name
+INST "fpga_0_Soft_TEMAC_GMII_TXD_0_pin_?_OBUF"  SLEW = FAST;
+INST "fpga_0_Soft_TEMAC_GMII_TX_EN_0_pin_OBUF"  SLEW = FAST;
+INST "fpga_0_Soft_TEMAC_GMII_TX_ER_0_pin_OBUF"  SLEW = FAST;
+INST "fpga_0_Soft_TEMAC_GMII_TX_CLK_0_pin_OBUF" SLEW = FAST;
+
+
+
+############################################################
+# GMII: IODELAY Constraints
+############################################################
+# Please modify the value of the IDELAY_VALUE
+# according to your design.
+# For more information on IDELAYCTRL and IODELAY, please
+# refer to the Spartan-6 User Guide.
+#
+INST "*delay_gmii_rx_dv"               IDELAY_VALUE = 20;
+INST "*delay_gmii_rx_er"               IDELAY_VALUE = 20;
+INST "*data_bus[0].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[1].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[2].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[3].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[4].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[5].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[6].delay_gmii_rxd"     IDELAY_VALUE = 20;
+INST "*data_bus[7].delay_gmii_rxd"     IDELAY_VALUE = 20;
+
+
+############################################################
+# For Setup and Hold time analysis on GMII inputs          #
+############################################################
+
+# Define data valid window with respect to the clock.
+# The spec states that, worst case, the data is valid 2 ns before the clock edge.
+# The worst case it to provide zero hold time (a 2ns window in total)
+#Changed to remove TIMEGRP 
+#TIMEGRP "IN_GMII" OFFSET         = IN  2 ns VALID 2 ns BEFORE "gmii_rx_clk"; 
+# Set to allow for 100ps setup/hold trace delay difference in relation to clock
+OFFSET = IN  2.4 ns VALID 2.8 ns BEFORE "fpga_0_Soft_TEMAC_GMII_RX_CLK_0_pin"; 
+
+
+############################################################
+# Reset path constraints                                   #
+#  These constraints add a measure of protection against   #
+#  metastability and skew in the reset nets.               #
+############################################################
+# Changed net name in synthesis of xps_ll_temac
+NET "*/I_TRIMAC_INST/RXGMIIRSTGENEN.I_SYNC_GMII_MII_RX_RESET_I/RESET_OUT*"  MAXDELAY = 6100 ps;
+NET "*/I_TRIMAC_INST/I_SYNC_GMII_MII_TX_RESET_I/RESET_OUT*"                 MAXDELAY = 6100 ps;
+NET "*/I_TRIMAC_INST/G_SYNC_MGMT_RESET.I_SYNC_MGMT_RESET_HOST_I/RESET_OUT*" MAXDELAY = 6100 ps;
+
+
+############################################################
+# Crossing of Clock Domain Constraints: please do not edit #
+############################################################
+# Changed net name in synthesis of xps_ll_temac
+# Flow Control logic reclocking - control signal is synchronised
+INST "*/I_TRIMAC_INST/I_FLOW/I_RX_PAUSE/PAUSE_REQ_TO_TX"       TNM="flow_rx_to_tx";
+INST "*/I_TRIMAC_INST/I_FLOW/I_RX_PAUSE/PAUSE_VALUE_TO_TX*"    TNM="flow_rx_to_tx";
+TIMESPEC "TS_flow_rx_to_tx"      = FROM "flow_rx_to_tx" TO tx_clock_gmii 8000 ps DATAPATHONLY;
+
+# generate a group of all flops NOT in the host clock domain
+TIMEGRP "all_ffs"                = FFS;
+TIMEGRP "ffs_except_host"        = "all_ffs" EXCEPT "host";
+
+# Changed net name in synthesis of xps_ll_temac
+# Configuration Register reclocking
+INST "*/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_CONF/RX0_OUT*"            TNM="async_config";
+INST "*/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_CONF/RX1_OUT*"            TNM="async_config";
+INST "*/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_CONF/FC_OUT_29"           TNM="async_config";
+
+INST "*/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_CONF/TX_OUT*"             TNM="async_config";
+INST "*/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_CONF/FC_OUT_30"           TNM="async_config";
+
+# Changed net name in synthesis of xps_ll_temac
+# speed change config
+INST "*/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_CONF/CNFG_SPEED*"         TNM="async_config";
+INST "*/I_TRIMAC_INST/I_?XGEN/*SPEED*"                               TNM="async_config";
+
+# Changed to comment out.  
+# In BSB systems the Host_clk = PLB_CLK.  Since the CORE Gen TIG'd constraints below 
+# are affecting XPS_LL_TEMAC DATAPATHONLY constraints above (at start of Soft_Ethernet_MAC constraints) 
+# these paths are commented out in favor of using the DATAPATHONLY constraints.  
+
+TIMESPEC "TS_config_to_all"      = FROM "async_config" TO "ffs_except_host" TIG;
+
+# Changed net name in synthesis of xps_ll_temac
+# Address filter specific cross clocking
+INST "*/I_TRIMAC_INST/I_ADDR_FILTER_TOP/dynamic_af_gen.I_DYNAMIC_CONFIG/unicast_addr_*" TNM="addr_config_to_rx";
+TIMESPEC "TS_addr_config_to_rx" = FROM "addr_config_to_rx" TO "ffs_except_host" TIG;
+
+############################################################
+# MDIO Constraints: please do not edit                     #
+############################################################
+
+# Changed net name in synthesis of xps_ll_temac
+# Place the MDIO logic in it's own timing groups
+INST "*I_TEMAC/*MII0.I_TRIMAC_CORE_?/I_TRIMAC_INST/I_RXGEN/ENABLE_REG" TNM = "mdc_falling";                    
+INST "*I_TEMAC/*MII0.I_TRIMAC_CORE_?/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/MIIM_READY_INT" TNM = "mdc_rising";     
+INST "*I_TEMAC/*MII0.I_TRIMAC_CORE_?/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_PHY/STATE_COUNT*"  TNM = FFS "mdc_rising";
+INST "*I_TEMAC/*MII0.I_TRIMAC_CORE_?/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_PHY/MDIO_TRISTATE" TNM = "mdc_falling";   
+INST "*I_TEMAC/*MII0.I_TRIMAC_CORE_?/I_TRIMAC_INST/MANIFGEN.I_MANAGEN/I_PHY/MDIO_OUT" TNM = "mdc_falling";   
+
+
+TIMEGRP "mdio_logic"             = "mdc_rising" "mdc_falling";
+
+TIMESPEC "TS_mdio1"              = PERIOD "mdio_logic" 400 ns;
+TIMESPEC "TS_mdio2"              = FROM "mdc_rising" TO "mdc_falling" 200 ns;
+TIMESPEC "TS_mdio3"              = FROM "mdio_logic" TO "host" "TS_host_clk";
+TIMESPEC "TS_mdio4"              = FROM "host" TO "mdio_logic" "TS_host_clk";
+
+# Changed net name in synthesis of xps_ll_temac
+# want to TIG any timing paths to the select of the TX clock BUFGMUXs as this is always an async path
+PIN "*I_CLOCK_INST*/*.BUFGMUX_SPEED_CLK.I?" TNM="clk_bufgmux";
+TIMESPEC "TS_bufgmux" = FROM "async_config" TO "clk_bufgmux" TIG;
