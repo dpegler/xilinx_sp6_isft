@@ -1,0 +1,29 @@
+#Please do not modify this file by hand
+XmpVersion: 13.4
+VerMgmt: 13.4
+IntStyle: default
+Flow: ise
+MHS File: system.mhs
+Architecture: spartan6
+Device: xc6slx45t
+Package: fgg484
+SpeedGrade: -3
+UserCmd1: 
+UserCmd1Type: 0
+UserCmd2: 
+UserCmd2Type: 0
+ClockInfo: USE_UNIQUE_CLOCK_PRIMS=FALSE|
+GenSimTB: 0
+SdkExportBmmBit: 1
+SdkExportDir: SDK_Export
+InsertNoPads: 0
+WarnForEAArch: 1
+HdlLang: Verilog
+SimModel: BEHAVIORAL
+ExternalMemSim: 0
+UcfFile: data/system.ucf
+EnableParTimingError: 1
+ShowLicenseDialog: 1
+Processor: microblaze_0
+ElfImp: 
+ElfSim: 
