@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project hello_spi ****
+
+make all 
+Building file: ../src/xspi_stm_flash_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../sp605_bist_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.20.b -mno-xl-soft-mul -MMD -MP -MF"src/xspi_stm_flash_example.d" -MT"src/xspi_stm_flash_example.d" -o"src/xspi_stm_flash_example.o" "../src/xspi_stm_flash_example.c"
+Finished building: ../src/xspi_stm_flash_example.c
+' '
+Building target: hello_spi.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sp605_bist_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.20.b -mno-xl-soft-mul -o"hello_spi.elf"  ./src/xspi_stm_flash_example.o   -lxilflash
+Finished building target: hello_spi.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size hello_spi.elf  |tee "hello_spi.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14506	    412	   2766	  17684	   4514	hello_spi.elf
+Finished building: hello_spi.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck hello_spi.elf -hw ../../hw_platform_0/system.xml -pe microblaze_0  |tee "hello_spi.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../hw_platform_0/system.xml -pe microblaze_0
+hello_spi.elf 
+
+ELF file	: hello_spi.elf
+elfcheck passed.
+Finished building: hello_spi.elf.elfcheck
+' '

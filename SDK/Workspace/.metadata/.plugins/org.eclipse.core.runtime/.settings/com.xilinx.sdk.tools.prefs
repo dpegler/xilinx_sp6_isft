@@ -1,0 +1,15 @@
+#Mon Oct 03 09:35:43 GMT-06:00 2011
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.bss=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.sbss2=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:Heap=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.sdata=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.sbss=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.tools.prefs.flash.noshowsupport=true
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.data=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:Stack=DDR3_SDRAM_MPMC_BASEADDR
+eclipse.preferences.version=1
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.sdata2=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:Heap-size=4096
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:Stack-size=4096
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.rodata=DDR3_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.hello_sysace\:.text=DDR3_SDRAM_MPMC_BASEADDR

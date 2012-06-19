@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="FLASH (Bank Address: MEM0_BASEADDR)" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.FlashController"/>
+	<item value="0x00500000" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.ProgOffset"/>
+	<item value="C:\sp605_bist\SDK\SDK_Workspace_35\hw_platform_0\cache\hello_sysace.elf.srec" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.ImageFile"/>
+	<item value="DDR3_SDRAM (Bank Address: MPMC_BASEADDR)" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.ScratchController"/>
+	<item value="false" key="com.xilinx.sdk.tools.internal.ui.ProgramFlashPresenter.PlatformFlash"/>
+</section>

@@ -1,0 +1,452 @@
+!SESSION 2010-10-28 17:34:18.144 -----------------------------------------------
+eclipse.buildId=Release 12.4 Build SDK_MS4.79
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\sp605_bist\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 17:35:41.454
+!MESSAGE Indexed 'sp605_bist_bsp_0' (0 sources, 7 headers) in 0.14 sec: 0 declarations; 0 references; 7 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.jface 4 2 2010-10-28 17:35:50.829
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:3865)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:463)
+	at org.eclipse.swt.widgets.Combo.getItem(Combo.java:646)
+	at org.eclipse.cdt.make.ui.dialogs.DiscoveryOptionsBlock.getCurrentProfileId(Unknown Source)
+	at org.eclipse.cdt.make.ui.dialogs.AbstractDiscoveryOptionsBlock.handleDiscoveryProfileChanged(Unknown Source)
+	at org.eclipse.cdt.make.ui.dialogs.DiscoveryOptionsBlock.createControl(Unknown Source)
+	at org.eclipse.cdt.ui.dialogs.TabFolderOptionBlock.addTab(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.MakeProjectOptionBlock.addTabs(Unknown Source)
+	at org.eclipse.cdt.ui.dialogs.TabFolderOptionBlock.createContents(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.MakeProjectOptionBlock.createContents(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.properties.MakePropertyPage.contentForCProject(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.properties.MakePropertyPage.createContents(Unknown Source)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:232)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1501)
+	at org.eclipse.jface.preference.PreferenceDialog$14.run(PreferenceDialog.java:1258)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1252)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:679)
+	at org.eclipse.jface.preference.PreferenceDialog$10.run(PreferenceDialog.java:708)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog$9.selectionChanged(PreferenceDialog.java:704)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:864)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:862)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1175)
+	at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:1200)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:251)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:245)
+	at org.eclipse.jface.util.OpenStrategy$3.run(OpenStrategy.java:419)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.jface 4 2 2010-10-28 18:01:43.305
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:3865)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:463)
+	at org.eclipse.swt.widgets.Combo.getItem(Combo.java:646)
+	at org.eclipse.cdt.make.ui.dialogs.DiscoveryOptionsBlock.getCurrentProfileId(Unknown Source)
+	at org.eclipse.cdt.make.ui.dialogs.AbstractDiscoveryOptionsBlock.handleDiscoveryProfileChanged(Unknown Source)
+	at org.eclipse.cdt.make.ui.dialogs.DiscoveryOptionsBlock.createControl(Unknown Source)
+	at org.eclipse.cdt.ui.dialogs.TabFolderOptionBlock.addTab(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.MakeProjectOptionBlock.addTabs(Unknown Source)
+	at org.eclipse.cdt.ui.dialogs.TabFolderOptionBlock.createContents(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.MakeProjectOptionBlock.createContents(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.properties.MakePropertyPage.contentForCProject(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.properties.MakePropertyPage.createContents(Unknown Source)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:232)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1501)
+	at org.eclipse.jface.preference.PreferenceDialog$14.run(PreferenceDialog.java:1258)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1252)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:679)
+	at org.eclipse.jface.preference.PreferenceDialog$10.run(PreferenceDialog.java:708)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog$9.selectionChanged(PreferenceDialog.java:704)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:864)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:862)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1670)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1124)
+	at org.eclipse.jface.preference.PreferenceDialog.selectSavedItem(PreferenceDialog.java:1054)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.selectSavedItem(FilteredPreferenceDialog.java:734)
+	at org.eclipse.jface.preference.PreferenceDialog$4.run(PreferenceDialog.java:375)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog.createContents(PreferenceDialog.java:371)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at org.eclipse.ui.internal.dialogs.PropertyDialog.createDialogOn(PropertyDialog.java:82)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.createDialog(PropertyDialogAction.java:176)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:155)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:13:34.568
+!MESSAGE Indexed 'bootloader' (0 sources, 20 headers) in 0.09 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:13:57.021
+!MESSAGE Indexed 'bootloader_prom' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:14:16.723
+!MESSAGE Indexed 'colorbar' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:14:34.332
+!MESSAGE Indexed 'hello_button' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:14:59.878
+!MESSAGE Indexed 'hello_flash' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:15:20.440
+!MESSAGE Indexed 'hello_gpio' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-10-28 18:15:48.627
+!MESSAGE Indexed 'hello_iic' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2010-11-15 11:26:46.376 -----------------------------------------------
+eclipse.buildId=Release 12.4 Build SDK_MS4.81b
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\sp605_bist\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:27:52.173
+!MESSAGE Indexed 'hello_mem' (0 sources, 20 headers) in 0.28 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:28:15.891
+!MESSAGE Indexed 'hello_spi' (0 sources, 20 headers) in 0.06 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:28:33.485
+!MESSAGE Indexed 'hello_switch' (0 sources, 20 headers) in 0.06 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:29:20.594
+!MESSAGE Indexed 'hello_sysace' (0 sources, 20 headers) in 0.06 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:29:37.938
+!MESSAGE Indexed 'hello_temac' (0 sources, 20 headers) in 0.05 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:30:02.641
+!MESSAGE Indexed 'hello_timer' (0 sources, 20 headers) in 0.06 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-11-15 11:30:18.437
+!MESSAGE Indexed 'hello_uart' (0 sources, 20 headers) in 0.06 sec: 122 declarations; 214 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.jface 4 2 2010-11-15 11:33:19.686
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:3865)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:463)
+	at org.eclipse.swt.widgets.Combo.getItem(Combo.java:646)
+	at org.eclipse.cdt.make.ui.dialogs.DiscoveryOptionsBlock.getCurrentProfileId(Unknown Source)
+	at org.eclipse.cdt.make.ui.dialogs.AbstractDiscoveryOptionsBlock.handleDiscoveryProfileChanged(Unknown Source)
+	at org.eclipse.cdt.make.ui.dialogs.DiscoveryOptionsBlock.createControl(Unknown Source)
+	at org.eclipse.cdt.ui.dialogs.TabFolderOptionBlock.addTab(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.MakeProjectOptionBlock.addTabs(Unknown Source)
+	at org.eclipse.cdt.ui.dialogs.TabFolderOptionBlock.createContents(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.MakeProjectOptionBlock.createContents(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.properties.MakePropertyPage.contentForCProject(Unknown Source)
+	at org.eclipse.cdt.make.internal.ui.properties.MakePropertyPage.createContents(Unknown Source)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:232)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1501)
+	at org.eclipse.jface.preference.PreferenceDialog$14.run(PreferenceDialog.java:1258)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1252)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:679)
+	at org.eclipse.jface.preference.PreferenceDialog$10.run(PreferenceDialog.java:708)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog$9.selectionChanged(PreferenceDialog.java:704)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:864)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:862)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1175)
+	at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:1200)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:251)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:245)
+	at org.eclipse.jface.util.OpenStrategy$4.run(OpenStrategy.java:409)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:3943)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3135)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2410)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3471)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2010-11-15 17:07:24.771 -----------------------------------------------
+eclipse.buildId=Release 12.4 Build SDK_MS4.81b
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2010-11-15 17:07:41.625
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2010-12-17 14:48:53.573 -----------------------------------------------
+eclipse.buildId=Release 12.4 Build SDK_MS4.81d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\sp605_bist\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.core.resources 2 10035 2010-12-17 14:48:56.339
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2010-12-17 14:50:36.386 -----------------------------------------------
+eclipse.buildId=Release 12.4 Build SDK_MS4.81d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-12-17 14:53:00.042
+!MESSAGE Indexed 'hello_world_0' (2 sources, 17 headers) in 0.75 sec: 128 declarations; 97 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2011-01-13 15:41:50.362 -----------------------------------------------
+eclipse.buildId=Release 13.1 Build SDK_O.40a
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:12.628
+!MESSAGE Indexed 'bootloader' (2 sources, 19 headers) in 1.89 sec: 190 declarations; 498 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:13.690
+!MESSAGE Indexed 'hello_mem' (1 sources, 29 headers) in 0.98 sec: 988 declarations; 1,526 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:13.737
+!MESSAGE Indexed 'hello_sysace' (1 sources, 8 headers) in 0.03 sec: 22 declarations; 118 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:13.846
+!MESSAGE Indexed 'hello_switch' (1 sources, 10 headers) in 0.09 sec: 89 declarations; 158 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:13.940
+!MESSAGE Indexed 'hello_spi' (1 sources, 12 headers) in 0.09 sec: 228 declarations; 459 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:14.018
+!MESSAGE Indexed 'hello_iic' (1 sources, 10 headers) in 0.06 sec: 208 declarations; 438 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:14.096
+!MESSAGE Indexed 'hello_gpio' (1 sources, 8 headers) in 0.05 sec: 16 declarations; 66 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:14.409
+!MESSAGE Indexed 'hello_flash' (2 sources, 19 headers) in 0.22 sec: 665 declarations; 595 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:14.487
+!MESSAGE Indexed 'hello_button' (1 sources, 8 headers) in 0.05 sec: 4 declarations; 99 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:14.737
+!MESSAGE Indexed 'colorbar' (2 sources, 14 headers) in 0.16 sec: 212 declarations; 377 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:15.034
+!MESSAGE Indexed 'hello_temac' (2 sources, 20 headers) in 0.23 sec: 493 declarations; 1,230 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:15.096
+!MESSAGE Indexed 'hello_timer' (1 sources, 8 headers) in 0.05 sec: 57 declarations; 270 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:15.206
+!MESSAGE Indexed 'bootloader_prom' (2 sources, 13 headers) in 0.08 sec: 128 declarations; 447 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:25.628
+!MESSAGE Indexed 'hello_uart' (1 sources, 8 headers) in 0.14 sec: 4 declarations; 31 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2011-01-13 15:42:29.081
+!MESSAGE Error while parsing /sp605_bist_bsp_0/microblaze_0/libsrc/xilflash_v2_02_a/src/xilflash_amd.c.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.get(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.blockComment(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.nextDirective(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.skipBranch(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.skipOverConditionalCode(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(Unknown Source)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(Unknown Source)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(Unknown Source)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.createAST(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.createAST(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMRebuildTask.run(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-01-13 15:42:29.175
+!MESSAGE Indexed 'sp605_bist_bsp_0' (115 sources, 89 headers) in 3.53 sec: 4,316 declarations; 29,001 references; 27 unresolved inclusions; 1 syntax errors; 102 unresolved names (0.31%)
+!SESSION 2011-06-27 12:04:54.968 -----------------------------------------------
+eclipse.buildId=Release 13.2 Build SDK_O.61xd
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:23.281
+!MESSAGE Indexed 'bootloader' (2 sources, 19 headers) in 5.95 sec: 190 declarations; 498 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:25.578
+!MESSAGE Indexed 'hello_sysace' (1 sources, 24 headers) in 1.81 sec: 789 declarations; 888 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.06%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:26.531
+!MESSAGE Indexed 'hello_timer' (1 sources, 15 headers) in 0.61 sec: 277 declarations; 394 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:28.125
+!MESSAGE Indexed 'hello_temac' (2 sources, 24 headers) in 1.47 sec: 640 declarations; 1,346 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:37.140
+!MESSAGE Indexed 'sp605_bist_bsp_0' (136 sources, 93 headers) in 8.94 sec: 4,703 declarations; 32,181 references; 36 unresolved inclusions; 1 syntax errors; 163 unresolved names (0.44%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:37.328
+!MESSAGE Indexed 'hello_uart' (1 sources, 8 headers) in 0.09 sec: 4 declarations; 31 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:37.593
+!MESSAGE Indexed 'hello_switch' (1 sources, 10 headers) in 0.16 sec: 89 declarations; 158 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:37.875
+!MESSAGE Indexed 'hello_spi' (1 sources, 10 headers) in 0.19 sec: 157 declarations; 406 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:38.328
+!MESSAGE Indexed 'hello_mem' (1 sources, 10 headers) in 0.30 sec: 143 declarations; 735 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:38.765
+!MESSAGE Indexed 'hello_iic' (1 sources, 10 headers) in 0.19 sec: 208 declarations; 438 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:39.046
+!MESSAGE Indexed 'hello_gpio' (1 sources, 8 headers) in 0.16 sec: 16 declarations; 66 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:39.906
+!MESSAGE Indexed 'hello_flash' (2 sources, 15 headers) in 0.73 sec: 518 declarations; 479 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:40.171
+!MESSAGE Indexed 'hello_button' (1 sources, 8 headers) in 0.17 sec: 4 declarations; 99 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:40.703
+!MESSAGE Indexed 'colorbar' (2 sources, 12 headers) in 0.39 sec: 146 declarations; 327 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-06-27 12:06:41.125
+!MESSAGE Indexed 'bootloader_prom' (2 sources, 13 headers) in 0.25 sec: 128 declarations; 447 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
